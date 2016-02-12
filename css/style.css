@@ -1,0 +1,123 @@
+body {
+  background-color: #849d8f;
+}
+
+.filter-sort {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 192px;
+  border: none;
+}
+
+.filter-sort__field {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #9bafa3;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.filter-sort__field:hover,
+.filter-sort__field:focus {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.filter-sort__field .select-icon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  width: 0;
+  height: 0;
+  margin-top: -.15rem;
+  pointer-events: none;
+  border-top: .35rem solid;
+  border-right: .35rem solid transparent;
+  border-bottom: .35rem solid transparent;
+  border-left: .35rem solid transparent;
+}
+
+.select:focus ~ .select-icon:after {
+  border-top-color: #333333;
+}
+
+.filter-sort__field .select {
+  width: 100%;
+  height: 36px;
+  margin: 0;
+  padding: 0 25px 0 10px;
+  background-color: #9bafa3;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter-sort__field .select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.filter-sort__field .select:hover,
+.filter-sort__field .select:focus,
+.filter-sort__field .select:active {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.filter-sort__field .select::-ms-expand {
+  display: none;
+}
+
+@-moz-document url-prefix() {
+  .filter-sort .select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 1rem;
+  }
+  .filter-sort option {
+    background-color: white;
+  }
+}
+
+@media screen and (min-width: 0\0) {
+  .filter-sort .select {
+    z-index: 1;
+    padding: 0.45rem 1.5rem 0.5rem 0.7rem;
+  }
+  .filter-sort:after {
+    z-index: 5;
+  }
+  .filter-sort:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    width: 1.5rem;
+    background-color: transparent;
+    pointer-events: none;
+  }
+  .filter-sort .select:hover,
+  .filter-sort .select:focus,
+  .filter-sort .select:active {
+    color: #333333;
+    background-color: #ffffff;
+  }
+}
+
+
+/* body:not(:-moz-handler-blocked) .select {
+
+} */
